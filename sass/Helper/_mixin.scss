@@ -1,0 +1,6 @@
+@mixin hearderText($color,$fs,$fw){
+    color:$color;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}

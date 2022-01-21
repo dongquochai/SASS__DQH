@@ -1,0 +1,69 @@
+// Color
+$color-purple-1:#b61984;
+$color-white-1: #fff;
+$color-black-1:#181818;
+$color-black-2:#191919;
+$color-violet: #dcd1f3;
+//font size
+$fs-1: 13px;
+$fs-2: 15px;
+$fs-3: 20px;
+$fs-4: 37px;
+$fs-5: 1.1rem;
+$fs-6: 3.8rem;
+$fs-7:0.75rem;
+$fs-8: 20px;
+$fs-9: 57px;
+
+//font weight
+$fw-1: 500;
+$fw-2: 600;
+$fw-3: 700;
+
+
+//line hieght
+$ls-1: 12px;
+$ls-2: 45px;
+$ls-3:65px;
+
+//Padding
+$pd-1: 6px;
+$pd-2: 14px;
+$pd-3: 21px;
+$pd-4: 30px;
+$pd-5: 33px;
+$pd-6: 100px;
+$pd-7: 60px;
+$pd-8: 150px;
+$pd-9:4em;
+$pd-10:8em;
+
+//Margin
+$mg-1: 30px;
+$mg-2: 25px;
+$mg-3: 70px;
+$mg-4: 60px;
+$mg-5: 0.5em;
+$mg-5: 0.75em;
+$mg-6:1em;
+
+//border
+$bd-1: 10px;
+$bd-2: 20px;
+$bd-3: 50px;
+//boder -radius
+$bdr-1:10px;
+$bdr-2:15px;
+$bdr-3:50px;
+
+//trainsition
+$ts-1:all 300ms ease;
+$ts-2:all 500ms ease;
+
+//break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px
+);

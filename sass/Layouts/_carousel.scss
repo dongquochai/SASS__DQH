@@ -1,0 +1,75 @@
+#coursel{
+    padding-top:$pd-10;
+    position: relative;
+    z-index: 1;
+}
+.coursel .container{
+    width: 1040px;
+}
+.coursel__left img{
+    max-width: 527px;
+
+}
+.coursel__right{
+    
+    form{
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+        padding: 40px 30px;
+        border-radius: 10px;
+        background:$color-white-1;}
+    h1{
+        color:$color-black-2;
+        font-size:$fs-8 +17;
+        font-weight:$fw-3;
+        line-height:$ls-2;
+        text-align: center;
+        margin-bottom:$mg-1;
+    }
+    
+} 
+
+.coursel__right form .form-row{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.course__icon{
+    position: relative;
+    i{
+        position: absolute;
+    top: 15px;
+    left: 20px;
+    color:$color-purple-1;
+    }
+    select{
+        font: inherit;
+    border-radius: 50px;
+    color: #181818;
+    font-size: 13px;
+    font-weight: none;
+    line-height: 12px;
+    padding: 12px 12px 12px 42px;
+    height: 3.7em;
+    transition: all 500ms ease;
+    outline: none;
+    height: 4em;
+    }
+}
+.form-control{
+    font: inherit;
+    border-radius:$bdr-3;
+    color:$color-black-1;
+    font-size:$fs-1;
+    font-weight: none;
+    line-height:$ls-1;
+    padding: 12px 12px 12px 42px;
+    height: 3.7em;
+    transition: all 500ms ease;
+    outline: none;
+    height: 4em;
+}
+.form-group{
+    textarea{
+        height: 90px;
+    border-radius: 20px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
+}

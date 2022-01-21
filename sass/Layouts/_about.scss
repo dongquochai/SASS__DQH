@@ -1,0 +1,33 @@
+
+#about .row{
+    padding: 0;
+    padding-top:$pd-5 +17;
+}
+#about .about__ctn{
+    padding-bottom:$pd-9;
+}
+.about__img{
+    display: block;
+    margin: 0;
+    line-height: 0;
+    max-width: 100%;
+    height: auto;
+}
+.about__title{
+    font-size: $fs-6;
+}
+.about__h1{
+   color:$color-purple-1; 
+   font-size: $fs-5;
+   font-weight:$fw-2;
+    line-height:$ls-1 +7;
+    margin-bottom:$mg-5;
+}
+
+
+.about__span{
+    color:$color-black-2;
+    font-size:$fs-6;
+    font-weight:$fw-3;
+    line-height:$ls-3 +3;
+}
