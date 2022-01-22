@@ -24,3 +24,15 @@
         padding:$pd-1 +4;
     }
 }
+.footer .btnPage{
+    font-family: "Montserrat", sans-serif;
+    border: solid 1px #fff;
+    box-shadow: 0 0 0 3em #fff inset;
+    width: 100%;
+    color: #b61984;
+    &:hover{
+        color: #fff;
+    box-shadow: #fff 0 0 1px inset;
+    background-color: #b61984;
+    }
+}

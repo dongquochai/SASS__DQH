@@ -27,12 +27,12 @@
 <body>
     <div class="wrapContent">
         <!-- hearder -->
-        <div class="hearder">
-            <header class="container hearderCTN">
+        <header class="hearder">
+            <div class="container hearderCTN">
                 <!-- hearder--BTN -->
                 <div class="hearder__left">
                     <div class="hearder__leftlogo">
-                        <a href="http://tabula.bold-themes.com/wavy/">
+                        <a class="navbar-brand" href="http://tabula.bold-themes.com/wavy/">
                             <img src="./img/crest.png" height="80" alt="#">
                         </a>
                     </div>
@@ -90,8 +90,8 @@
                         </li>
                     </ul>
                 </div>
-            </header>
-        </div>
+            </div>
+        </header>
         <!-- ABOUT US -->
         <section id="about" class="about">
             <div class="container about__ctn">
@@ -228,12 +228,12 @@
     </section>
     <!-- Course -->
     <section class="coursel" id="coursel">
-        <div class="container">
+        <div class="container coursel__container">
             <div class="row">
                 <div class="coursel__left col-xl-7">
                     <img src="./img/conatct_inner.png" alt="">
                 </div>
-                <div class="coursel__right col-xl-5">
+                <div class="coursel__right col-lg-5">
                     <form action="">
                         <h1>Find Your Course</h1>
                         <div class="form-row">
@@ -266,15 +266,108 @@
                 </div>
             </div>
         </div>
-        <div class="coursel__bg">
-            <img src="./img/accent_bottom_wave_01.png" alt="">
-        </div>
+       
     </section>
-    <section class="footer">
-
-    </section>
+    <footer class="footer">     
+            <div class="container">
+                <div class="row footer-content">
+                    <div class="col-12 col-sm-6 col-lg-3 footer-contact">
+                        <h3 class="card-title-lg">Contact us</h3>
+                        <ul class="footer__content">
+                            <li>
+                                <span>
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    Franklin St, Greenpoint Ave
+                                </span>
+                            </li>
+                            <li>
+                                <a href="tel:++2342 5446 67">
+                                    <i class="fa fa-phone"></i>
+                                    +2342 5446 67
+                                </a>
+                            </li>
+                            <li>
+                                <span>
+                                    <i class="fa fa-clock"></i>
+                                    Monday - Friday: 8 AM - 5 PM
+                                </span>
+                            </li>
+                            <li>
+                                <span>                          <a href="https://twitter.com/bold_themes"><i class="fab fa-twitter"></i></a>    
+                                    <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>  
+                                    <a href="https://www.facebook.com/boldthemes/"><i class="fab fa-facebook-f"></i></a>    
+                                    <a href="https://www.youtube.com/channel/UCPL5LgX32KsbQ1i9nV-xiKA"><i class="fab fa-youtube"></i></a>                
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 footer__links">
+                        <h3 class="card-title-lg ">Quick Links</h3>
+                        <ul class="footer__content footer__contentLine">
+                            <li>
+                                <a href="./index.html">Home</a>                        
+                            </li>
+                            <li>
+                                <a href="#coursel">coursel</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#blog">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 footer__about">
+                        <h3 class="card-title-lg">About</h3>
+                        <ul class="footer__content footer__contentLine ">
+                            <li>
+                                <a href="#about">About Us</a>                        
+                            </li>
+                            <li>
+                                <a href="http://tabula.bold-themes.com/wavy/courses/workshops-and-events/">Events</a>
+                            </li>
+                            <li>
+                                <a href="http://tabula.bold-themes.com/wavy/courses/get-quote/">Get Quote</a>
+                            </li>
+                            <li>
+                                <a href="#footer">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 footer__new">
+                        <h3>Newsletter</h3>
+                        <ul class="footer__content">
+                            <li>
+                                <input class="footer__input" type="text" placeholder="Your Email">
+                            </li>
+                            <li>
+                                <button class="btnPage">SUBSCRIBE</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
 
     <!-- Main jS -->
+    <script>
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.querySelector("header").classList.add("header-scroll");
+                document.querySelector("header").classList.toggle("header-animation");
+            } else {
+                document.querySelector("header").classList.remove("header-scroll");
+                document.querySelector("header").classList.toggle("header-animation");
+            }
+        }
+        window.onscroll = function () {
+            scrollFunction()
+        };
+    
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

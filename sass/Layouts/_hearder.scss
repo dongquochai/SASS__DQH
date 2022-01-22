@@ -1,10 +1,10 @@
 
 .hearder{
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    font-size:$fs-1;
     width: 100%;
     z-index: 100;
+    transition: all 0.5s;
     .hearderCTN{
         display: flex;
         .hearder__right{
@@ -50,4 +50,130 @@
         color:$color-purple-1;
     }
 }
- 
+.header-scroll {
+    background-color: $color-white-1;
+    z-index: 100;
+    animation: headerAnimation 0.5s ease;
+    padding: 6px 0;
+    box-shadow: 0 0 10px 0 #cccccc80;
+    .header__logo {
+        display: none;
+    }
+    .btn-purple {
+        padding: 0.8em 1.5em;
+    }
+}
+.header-animation {
+    animation: headerAnimation 0.5s ease;
+}
+@keyframes headerAnimation{
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+//reponsive
+@media screen and(min-width:0) {
+    .hearder__left {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .navbar-toggler{
+        border: none;
+    }
+    .navbar-brand img {
+        height: 3rem;
+    }
+    .nav-item a{
+        color: $color-black-1;
+        &:hover{
+           color: $color-purple-1;
+        }
+    }
+    .header__right{
+        padding-top: $pd-2;
+    }
+    .hearder__rightIcon{
+        padding-top: $pd-1;
+    }
+    .nav-hearder .nav-item .nav-link:focus,
+    .nav-hearder .nav-item .nav-link:hover {
+        color: $color-purple-1;
+    }
+}
+
+// @media screen and(min-width:1024px) {
+//     #header {
+//         margin: auto;  
+//     }
+//     .hearder__right{
+//         display: flex;
+//     }
+// }
+@media screen and(min-width:1200px) {
+    .hearder__left {
+        flex-direction: row;
+    }
+    .nav-hearder{
+        align-items: center;
+    }
+    .navbar-brand img {
+        height: 80px;
+    }
+    .nav-hearder .nav-item .nav-link{
+        color: $color-black-1;
+        text-align: center;
+    }
+    .nav-item {
+        width: 95px;
+    }
+    .nav-link {
+        font-weight: $fw-2;
+        position: relative;
+    }
+    .nav-link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 5;
+        background-color: $color-purple-1;
+        height: 0.5rem;
+        width: 0.5rem;
+        left: 50%;
+        border-radius: 50%;
+        bottom: -4px;
+        pointer-events: none;
+        transform: scale(0);
+        transition: $ts-1;
+    }
+    .active .nav-link::after {
+        transform: scale(1);
+    }
+    .nav-item:hover {
+        .nav-link::after {
+            transform: scale(1.5);
+        }
+        .nav-link {
+            color: $color-purple-1 !important;
+        }
+    }
+    .hearder__righ{
+        padding-top: 0;
+        padding-left:$pd-4;
+    }
+    .hearder__rightIcon{
+        padding-top: 0;
+    }
+    .hearder__rightitem{
+        display: flex;
+        align-items: center;
+    }
+    .hearder__rightPhone{
+        padding-right: 10px;
+    }
+}

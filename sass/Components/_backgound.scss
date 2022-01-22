@@ -24,11 +24,20 @@
     user-select: none;
     max-width: 100%; 
 }
-.coursel__bg{
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: -8;
+.coursel{
+    background-image: url(../../img/accent_bottom_wave_01.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 4em;
+}
+
+.footer{
+    background-image: url(../../img/footer_background.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8em 0;  
+    font-family: "Roboto", sans-serif;
 }

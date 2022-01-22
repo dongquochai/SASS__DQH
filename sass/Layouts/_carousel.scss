@@ -3,11 +3,9 @@
     position: relative;
     z-index: 1;
 }
-.coursel .container{
-    width: 1040px;
-}
+
 .coursel__left img{
-    max-width: 527px;
+    max-width: 100%;
 
 }
 .coursel__right{
@@ -71,5 +69,86 @@
         height: 90px;
     border-radius: 20px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
+}
+
+// reponsive
+@media screen and (min-width:0px){
+    #coursel {
+        padding-top: 4rem;
+    }
+    #coursel .row {
+        padding: 0;
+    }
+    .coursel__left{
+        padding: 3rem 2.2rem;
+        padding-bottom:$pd-11;
+        
+    }
+    .coursel__right{
+        form{
+            padding: 40px 25px;
+        }
+    }
+    .coursel__right{
+        form legend{
+            font-size: 1.87rem;
+            text-align: left;
+            padding-bottom: 3.15rem;
+            margin: 0;
+        }
+    }
+    .coursel__right form{
+        padding: 40px 25px;  
+    }
+    .coursel__right form .form-control {
+        font-size: 0.7rem;
+        padding-left: 2.5rem;
+        height: 2.5rem;
+    }
+    .coursel__right form .custom-select{
+        padding-left: 2.5rem;
+        height: 2.4rem;
+        color: #6f7880;
+        font-size: 0.7rem;
+    }
+    .coursel__right .btnPage {
+        margin: 24px 0 30px 0;
+    }   
+}
+@media screen and (min-width:780px){
+    .coursel__right .btnPage{
+        width: 24%;
+    }   
+}
+@media screen and (min-width:992px){
+    #coursel .container{
+        max-width: 1040px;
+    }
+    .coursel__right{
+        margin-top: 3rem;
+        padding: 0 20px;
+    }
+    .coursel__right .btnPage{
+        width: 50%;
+    }
+    .coursel__right form{
+        max-width: 394px;
+        padding: 30px 25px;
+        padding-bottom: 35px;
+    }
+}
+@media screen and (min-width:1200px){
+    .coursel__left{
+        text-align: center;
+    }
+    .img-fluid{
+        max-width: 527px;
+    }
+    .coursel__right form legend {
+        font-size: 2.35rem;
+    }
+    .coursel__right .btnPage{
+        width: 45%;
     }
 }
