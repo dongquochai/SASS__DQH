@@ -194,72 +194,69 @@ a:hover {
   background-color: #b61984;
 }
 
-.hearder {
+.header {
   position: fixed;
-  font-size: 13px;
-  width: 100%;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.5);
+          box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.5);
+  width: -webkit-fill-available;
   z-index: 100;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
-.hearder .hearderCTN {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.navbar,
+.navbar-brand {
+  padding: 0;
 }
 
-.hearder .hearderCTN .hearder__right {
-  width: 100%;
+.nav-link {
+  font-size: 0.8rem;
 }
 
-.hearder .hearderCTN .hearder__right .hearder__rightitem {
-  float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.navbar-toggler {
+  padding: 0 0.75rem 0 0;
 }
 
-.hearder__right {
-  width: 100%;
-  padding: 21px;
+.header__toggler {
+  font-size: 25px;
 }
 
-.hearder__right .nav-hearder {
-  float: right;
+.header__toggler:hover {
+  color: #b61984;
 }
 
-.hearder__right .nav-hearder .nav-item {
-  padding-right: 21px;
+.header__toggler:hover .fa-bars {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transform: scaleY(1.2);
+          transform: scaleY(1.2);
+}
+
+.navbar-expand-lg .navbar-nav .nav-item {
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
-.hearder__right .nav-hearder .nav-link {
-  color: #191919;
+.navbar-expand-lg .navbar-nav .nav-item:hover::after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
   font-weight: 600;
-  font-size: 13px;
   position: relative;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
-.hearder__right .nav-hearder .nav-link:hover {
-  color: #b61984;
-}
-
-.hearder__icontW {
-  margin-left: 1em;
-}
-
-.hearder__icon {
+.fa-twitter, .fa-facebook-f, .fa-instagram, .fa-youtube {
+  padding: 6px 1.8px;
+  font-size: 0.8625rem;
   color: #181818;
-  padding: 0px 2px;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
-.hearder__icon:hover {
+.fa-twitter:hover, .fa-facebook-f:hover, .fa-instagram:hover, .fa-youtube:hover {
   color: #b61984;
 }
 
@@ -317,7 +314,7 @@ a:hover {
 }
 
 @media screen and (min-width: 0) {
-  .hearder__left {
+  .navbar {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -338,26 +335,37 @@ a:hover {
   .nav-item a:hover {
     color: #b61984;
   }
-  .header__right {
-    padding-top: 14px;
+  .header__contact {
+    padding-top: 1.3rem;
   }
-  .hearder__rightIcon {
-    padding-top: 6px;
+  .header__social-icon {
+    padding-top: 1rem;
   }
-  .nav-hearder .nav-item .nav-link:focus,
-  .nav-hearder .nav-item .nav-link:hover {
+  .navbar-light .navbar-nav .nav-link:focus,
+  .navbar-light .navbar-nav .nav-link:hover {
     color: #b61984;
   }
 }
 
+@media screen and (min-width: 1024px) {
+  #header {
+    margin: auto;
+  }
+  .header__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .hearder__left {
+  .navbar {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .nav-hearder {
+  .navbar-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -365,9 +373,13 @@ a:hover {
   .navbar-brand img {
     height: 80px;
   }
-  .nav-hearder .nav-item .nav-link {
+  .nav-content {
+    padding-right: 4em;
+  }
+  .navbar-expand-xl .navbar-nav .nav-link {
     color: #181818;
     text-align: center;
+    font-size: 13px;
   }
   .nav-item {
     width: 95px;
@@ -394,8 +406,8 @@ a:hover {
     transition: all 300ms ease;
   }
   .active .nav-link::after {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   .nav-item:hover .nav-link::after {
     -webkit-transform: scale(1.5);
@@ -404,14 +416,14 @@ a:hover {
   .nav-item:hover .nav-link {
     color: #b61984 !important;
   }
-  .hearder__righ {
+  .header__contact {
     padding-top: 0;
-    padding-left: 30px;
+    padding: left 30px;
   }
-  .hearder__rightIcon {
+  .header__social-icon {
     padding-top: 0;
   }
-  .hearder__rightitem {
+  .header__contact-cell {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -419,7 +431,7 @@ a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .hearder__rightPhone {
+  .header__phone {
     padding-right: 10px;
   }
 }
@@ -786,6 +798,10 @@ a:hover {
 
 .footer ul li a:hover {
   opacity: .8;
+}
+
+.footer ul li span i {
+  color: #fff;
 }
 
 .footer ul li span i:hover {

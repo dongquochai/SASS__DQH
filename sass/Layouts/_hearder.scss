@@ -1,57 +1,52 @@
-
-.hearder{
+.header{
     position: fixed;
-    font-size:$fs-1;
-    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 10px 0 rgba(204,204,204,.5);
+    width: -webkit-fill-available;
     z-index: 100;
-    transition: all 0.5s;
-    .hearderCTN{
-        display: flex;
-        .hearder__right{
-            width: 100%;
-            .hearder__rightitem{
-                float: right;
-                display: flex;
-            }
+}
+.navbar,
+.navbar-brand {
+    padding: 0;
+}
+.nav-link {
+    font-size: $fs-0;
+}
+.navbar-toggler {
+    padding: 0 0.75rem 0 0;
+}
+.header__toggler{
+    font-size:$fs-3 +5;
+    &:hover{
+        color: $color-purple-1;
+        .fa-bars{
+            transition: $ts-1;
+            transform: scaleY(1.2);
         }
     }
 }
-.hearder__right{
-    width: 100%;
-    padding:$pd-3;
-    .nav-hearder{
-        float: right;
+.navbar-expand-lg .navbar-nav .nav-item {
+    transition: $ts-1;
+    &:hover::after {
+        transform: scale(1.1);
     }
 }
-
-.hearder__right .nav-hearder .nav-item{      
-        padding-right: $pd-3;
-        transition: $ts-1;
-        
-}
-.hearder__right .nav-hearder .nav-link{
-    color: $color-black-2;
+.navbar-expand-lg .navbar-nav .nav-link {
     font-weight: $fw-2;
-    font-size: $fs-1;
     position: relative;
     transition: $ts-1;
-    &:hover{
+}
+.fa-twitter,.fa-facebook-f,.fa-instagram,.fa-youtube{
+    padding: $pd-1 $pd-1*0.3;
+    font-size: $fs-0 + 0.0625rem;
+    color: $color-black-1;
+    transition: $ts-1;
+    &:hover {
         color: $color-purple-1;
     }
 }
-.hearder__icontW{
-    margin-left: 1em;
-}
-.hearder__icon{
-    color: $color-black-1;
-    padding: 0px 2px;
-    transition: all 300ms ease;
-    &:hover{
-        color:$color-purple-1;
-    }
-}
 .header-scroll {
-    background-color: $color-white-1;
+    background-color:$color-white-1;
     z-index: 100;
     animation: headerAnimation 0.5s ease;
     padding: 6px 0;
@@ -63,10 +58,11 @@
         padding: 0.8em 1.5em;
     }
 }
+
 .header-animation {
     animation: headerAnimation 0.5s ease;
 }
-@keyframes headerAnimation{
+@keyframes headerAnimation {
     0% {
         transform: translateY(0%);
     }
@@ -77,13 +73,14 @@
         transform: translateY(0);
     }
 }
-//reponsive
+
+// //Reponsive
 @media screen and(min-width:0) {
-    .hearder__left {
+    .navbar {
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
-    .navbar-toggler{
+    .navbar-toggler {
         border: none;
     }
     .navbar-brand img {
@@ -95,39 +92,42 @@
            color: $color-purple-1;
         }
     }
-    .header__right{
-        padding-top: $pd-2;
+    .header__contact {
+        padding-top: $pd-13;
     }
-    .hearder__rightIcon{
-        padding-top: $pd-1;
+    .header__social-icon {
+        padding-top: $pd-12;
     }
-    .nav-hearder .nav-item .nav-link:focus,
-    .nav-hearder .nav-item .nav-link:hover {
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
         color: $color-purple-1;
     }
 }
-
-// @media screen and(min-width:1024px) {
-//     #header {
-//         margin: auto;  
-//     }
-//     .hearder__right{
-//         display: flex;
-//     }
-// }
+@media screen and(min-width:1024px) {
+    #header {
+        margin: auto;  
+    }
+    .header__contact {
+        display: flex;
+    }
+}
 @media screen and(min-width:1200px) {
-    .hearder__left {
+    .navbar {
         flex-direction: row;
     }
-    .nav-hearder{
+    .navbar-nav{
         align-items: center;
     }
     .navbar-brand img {
         height: 80px;
     }
-    .nav-hearder .nav-item .nav-link{
+    .nav-content{
+        padding-right:$pd-9;
+    }
+    .navbar-expand-xl .navbar-nav .nav-link {
         color: $color-black-1;
         text-align: center;
+        font-size:$fs-1 ;
     }
     .nav-item {
         width: 95px;
@@ -152,7 +152,7 @@
         transition: $ts-1;
     }
     .active .nav-link::after {
-        transform: scale(1);
+        transform: scale(0);
     }
     .nav-item:hover {
         .nav-link::after {
@@ -162,18 +162,18 @@
             color: $color-purple-1 !important;
         }
     }
-    .hearder__righ{
+    .header__contact {
         padding-top: 0;
-        padding-left:$pd-4;
+        padding: left $pd-4;;
     }
-    .hearder__rightIcon{
+    .header__social-icon {
         padding-top: 0;
     }
-    .hearder__rightitem{
+    .header__contact-cell {
         display: flex;
         align-items: center;
     }
-    .hearder__rightPhone{
-        padding-right: 10px;
+    .header__phone {
+        padding-right:$pd-1 +4;
     }
 }
